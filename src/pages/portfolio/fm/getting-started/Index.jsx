@@ -12,10 +12,10 @@ export const Index = () => {
 			</figure>
 			<h1 className="text-4xl text-neutral-100">Heyme!</h1>
 			<Link
-				to="fm"
+				to="qr-code"
 				className="rounded-lg bg-slate-900 px-8 py-2 text-neutral-100"
 			>
-				Visit FM
+				Visit QR Code
 			</Link>
 		</div>
 	)

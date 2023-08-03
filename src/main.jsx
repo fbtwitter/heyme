@@ -10,8 +10,11 @@ import {
 import App from './App'
 import { Index as IndexPages } from './pages/Index'
 import { Index as IndexPortfolio } from './pages/portfolio/Index'
+import { Index as IndexFM } from './pages/portfolio/fm/Index'
+import { Index as IndexFMGettingStarted } from './pages/portfolio/fm/getting-started/Index'
 
 import '@/scss/styles.scss'
+import QRCode from './pages/portfolio/fm/getting-started/QRCode'
 
 const router = createBrowserRouter(
 	createRoutesFromElements(
@@ -19,6 +22,13 @@ const router = createBrowserRouter(
 			<Route index element={<IndexPages />} />
 			<Route path="portfolio">
 				<Route index element={<IndexPortfolio />} />
+				<Route path="fm">
+					<Route index element={<IndexFM />} />
+					<Route path="getting-started">
+						<Route index element={<IndexFMGettingStarted />} />
+						<Route path="qr-code" element={<QRCode />} />
+					</Route>
+				</Route>
 			</Route>
 		</Route>
 	)
